@@ -52,6 +52,13 @@ int Recinto::_maximo(Sensor** v, int n, std::string unidad, int mejorPos){
 
 int Recinto::_buscar(Sensor** v, int n, const std::string& nombreBuscado){
     //TODO
+    for (int i = 0 ; i < n; i++){ // vaya saber si está bien
+        if (v[i]->nombre == nombreBuscado){
+            return std::cout << v[i]->nombre;
+        } else {
+            continue;
+        }
+    }
 }
 
 Sensor* Recinto::_getSensor(Sensor** v, int n, int posBuscada){
@@ -66,3 +73,4 @@ Sensor* Recinto::_getSensor(Sensor** v, int n, int posBuscada){
         }
     }
 }
+
